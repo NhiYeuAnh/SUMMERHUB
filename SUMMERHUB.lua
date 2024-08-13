@@ -4706,7 +4706,6 @@ end)
         end
     })    
 -------Yeuemnhieulam PhuongTran
-print("Yeuemnhieulam")\
 Event:Seperator("Sea Event")
 
 Event:Toggle("Auto Drive Boats", false, function(value)
