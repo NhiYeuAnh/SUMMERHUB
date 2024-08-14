@@ -4706,9 +4706,9 @@ end)
         end
     })    
 -------Yeuemnhieulam PhuongTran
-Event:Seperator("Sea Event")
-
-Event:Toggle("Auto Drive Boats", false, function(value)
+local SeaEvent = Tabs.Event:Seperator("Sea Event")
+local Boats = Tabs.Event:AddToggle("Boats"),{Title = "Auto Drives Boats", Default = false }),
+ Boats:OnChanged(function(value)
     _G.DomadicAutoDriveBoat = value
     StopTween( _G.DomadicAutoDriveBoat)
 end)
@@ -4764,7 +4764,7 @@ spawn(function()
     end)
 end)
 
-Event:Toggle("Auto Kill Terror Shark", false, function(value)
+local Terro = Tabs.Event:AddToggle("Terro"),{Title = "Kill Terro Shark", Default = false }), Terro:OnChanged(function(value)
     _G.AutoTerrorshark = value
     StopTween( _G.AutoTerrorshark)
 end)
